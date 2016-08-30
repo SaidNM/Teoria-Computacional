@@ -40,16 +40,45 @@ def numero():
 def iniciar_programa(numero):
 	archivo = open("numprimo.txt","a")
 
-	primos = [2,3,5,7,11]
-	lista = []
-	binario = []
-	
+	primos = [2,3,5,7,11,13,17,19,23,29,31,47,53]
+	binario = []	
+	obtener_primos(primos,binario,archivo,numero)
+	escribir_archivo_binario(archivo,binario)
+	archivo.close()
+
+def obtener_primos(primos,binario,archivo,numero):
+	archivo.write("{ ")
 	if (numero >= 2):
-		pass #aqui va la logica de saber si es numero primo o no xD xD
-		
+		for numero in range(2,numero+1):
+			cont=0
+			for valor in primos:
+				if (numero == valor):
+					archivo.write(str(numero)+", ")
+					binario.append(bin(numero))
+					break
+				else:
+					mod = numero % valor
+					if(mod == 0):
+						break
+					else:
+						if(cont<len(primos)):
+							cont = cont +1
+							if (cont == (len(primos)-1)):
+								archivo.write(str(numero))
+								archivo.write(", ")
+								binario.append(bin(numero))
+								break
+							else: 
+								continue
+
+		archivo.write(" }\n")
 			
 	else:
 		print("no tiene numeros primos")
-	
-	archivo.close()
+
+def escribir_archivo_binario(archivo,binario):
+	archivo.write("{ ")
+	for num_bin in binario:
+		archivo.write(str(num_bin)+",")
+	archivo.write("}\n")
 
