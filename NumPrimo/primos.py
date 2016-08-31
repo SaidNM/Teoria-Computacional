@@ -16,6 +16,7 @@ def nuevo_conteo():
 	except:
 		print("opcion invalida")
 
+
 def num_aleatorio():
 	numero = random.randrange(1,1001)
 	return numero
@@ -40,10 +41,14 @@ def numero():
 def iniciar_programa(numero):
 	archivo = open("numprimo.txt","a")
 
-	primos = [2,3,5,7,11,13,17,19,23,29,31,47,53]
+	primos = [2,3,5,7,11]
 	binario = []	
 	obtener_primos(primos,binario,archivo,numero)
 	escribir_archivo_binario(archivo,binario)
+	print("numero de ceros")
+	contar_ceros(binario)
+	print("numero de unos")
+	contar_unos(binario)
 	archivo.close()
 
 def obtener_primos(primos,binario,archivo,numero):
@@ -64,6 +69,7 @@ def obtener_primos(primos,binario,archivo,numero):
 						if(cont<len(primos)):
 							cont = cont +1
 							if (cont == (len(primos)-1)):
+								primos.append(numero)
 								archivo.write(str(numero))
 								archivo.write(", ")
 								binario.append(bin(numero))
@@ -81,4 +87,15 @@ def escribir_archivo_binario(archivo,binario):
 	for num_bin in binario:
 		archivo.write(str(num_bin)+",")
 	archivo.write("}\n")
+
+def contar_ceros(binario):
+	for bin in binario:
+		bin = str(bin)
+		print((bin.count("0"))-1)
+
+def contar_unos(binario):
+	for bin in binario:
+		bin = str(bin)
+		print(bin.count("1"))
+
 
