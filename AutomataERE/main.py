@@ -20,7 +20,6 @@ while True:
 		palabras = automata.automata_ere(texto)
 		funciones.imprimir_palabras_ere(palabras)
 		funciones.nuevo_texto()
-		pass
 	elif(opcion==3):
 		pass
 	else:
