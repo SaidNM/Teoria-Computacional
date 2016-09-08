@@ -1,6 +1,7 @@
 import automata
 import funciones
 
+
 while True:
 	try:
 		opcion=input('1.-Introducir Texto\n2.-Leer un texto\n3.-Grafico del automata\nElige una opcion: ')
@@ -21,7 +22,9 @@ while True:
 		funciones.imprimir_palabras_ere(palabras)
 		funciones.nuevo_texto()
 	elif(opcion==3):
-		pass
+		import Diagrama1
+		
+
 	else:
 		print('Introduce una opcion valida')
 		continue

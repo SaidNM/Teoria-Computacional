@@ -1,4 +1,4 @@
-
+import tkinter as tk
 def texto():
 	texto=input('Introduce un texto\n')
 	return texto
