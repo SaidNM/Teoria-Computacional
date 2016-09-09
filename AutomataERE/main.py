@@ -1,5 +1,6 @@
 import automata
 import funciones
+import Diagrama1
 
 
 while True:
@@ -22,7 +23,7 @@ while True:
 		funciones.imprimir_palabras_ere(palabras)
 		funciones.nuevo_texto()
 	elif(opcion==3):
-		import Diagrama1
+		Diagrama1.crearDiagrama()
 		
 
 	else:
