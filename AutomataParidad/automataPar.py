@@ -1,5 +1,5 @@
 #codigo ascii del 0-1   "48-49"
-def automata(cadena,archivo):
+def automata(cadena):
 	estado=0
 
 	for bit in cadena:
