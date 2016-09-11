@@ -27,12 +27,9 @@ def generarCadena():
 	return cadena
 
 
-	
-
-
 
 def cardinalidad_aleatoria():
-	numero = random.randrange(1,100)
+	numero = random.randrange(1,1000)
 	return numero
 def num_aleatorio():
 	bit = random.randrange(0,2)
