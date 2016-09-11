@@ -3,6 +3,8 @@ def automata(cadena):
 	estado=0
 
 	for bit in cadena:
+		if(bit ==" "):
+			break
 		if(estado==0):
 			estado=estadoCero(bit)
 		elif(estado==1):
@@ -11,6 +13,8 @@ def automata(cadena):
 			estado=estadoDos(bit)
 		elif(estado==3):
 			estado=estadoTres(bit)
+		
+		
 
 	if(estado==0):
 		return 1
