@@ -1,10 +1,9 @@
 import random
 def menu():
 	try:
-		
-			opcion = input("1.-Modo Manual\n2.-Modo Automatico ")
-			opcion = int(opcion)
-			return opcion
+		opcion = input("1.-Modo Manual\n2.-Modo Automatico ")
+		opcion = int(opcion)
+		return opcion
 	except:
 		print("Introduce una opcion valida")
 def nuevo_conteo():
@@ -17,7 +16,7 @@ def nuevo_conteo():
 
 
 def num_aleatorio():
-	numero = random.randrange(1000)
+	numero = random.randrange(30)
 	return numero
 def opcion_aleatoria():
 	opcion = random.randrange(1,3)

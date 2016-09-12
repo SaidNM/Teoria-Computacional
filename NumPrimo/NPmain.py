@@ -21,6 +21,7 @@ if (opcion == 1):
 elif(opcion == 2):
 	while True:
 		numero = primos.num_aleatorio()
+		print(numero)
 		primos.iniciar_programa(numero)
 		while True:
 			op = primos.opcion_aleatoria()

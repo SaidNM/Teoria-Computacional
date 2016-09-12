@@ -34,3 +34,6 @@ def cardinalidad_aleatoria():
 def num_aleatorio():
 	bit = random.randrange(0,2)
 	return bit
+def op_aleatorio():
+	bit = random.randint(1,2)
+	return bit

@@ -47,7 +47,7 @@ def iniciar_programa(numero):
 	escribir_archivo_binario(archivo,binario)
 	print("numero de ceros")
 	contar_ceros(binario)
-	print("numero de unos")
+	print("Numero de unos")
 	contar_unos(binario)
 	archivo.close()
 
@@ -58,6 +58,7 @@ def obtener_primos(primos,binario,archivo,numero):
 			cont=0
 			for valor in primos:
 				if (numero == valor):
+					print(numero)
 					archivo.write(str(numero)+", ")
 					binario.append(bin(numero))
 					break
@@ -69,6 +70,7 @@ def obtener_primos(primos,binario,archivo,numero):
 						if(cont<len(primos)):
 							cont = cont +1
 							if (cont == (len(primos)-1)):
+								print(numero)
 								primos.append(numero)
 								archivo.write(str(numero))
 								archivo.write(", ")
@@ -92,6 +94,7 @@ def contar_ceros(binario):
 	for bin in binario:
 		bin = str(bin)
 		print((bin.count("0"))-1)
+		
 
 def contar_unos(binario):
 	for bin in binario:

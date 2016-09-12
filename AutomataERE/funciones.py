@@ -17,12 +17,18 @@ def nuevo_texto():
 			else:
 				continue
 
-def imprimir_palabras_ere(palabras):
-	for palabra in palabras:
-		print(palabra)
+def imprimir_palabras_ere(palabras,fila,palabra):
+	i=0
+	for pala in palabras:
+		fil=fila[i]
+		fil=str(fil)
+		pal=palabra[i]
+		pal=str(pal)
+		print("Palabra: " + pala+" fila: "+fil+" palabra numero: "+pal)
+		i=i+1
 
 def leer_archivo():
 	archivo=open("archivo.txt","r")
-	lineas=str(archivo.readlines())
+	lineas=str(archivo.read())
 	archivo.close()
 	return lineas

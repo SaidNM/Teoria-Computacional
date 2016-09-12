@@ -1,9 +1,12 @@
-def automata_ere(texto):
+def automata_ere(texto,fila,palabra):
 	estado=0
 	palabras_ere=[]
 	auxiliar_palabra = ''
+	contfilas=1
+	contpalabra=1
 
 	for caracter in texto:
+		
 		aux_caracter = caracter.lower()
 
 		if (estado ==0):
@@ -23,13 +26,23 @@ def automata_ere(texto):
 		else:
 			if(estado ==-1):
 				palabras_ere.append(auxiliar_palabra)
+				fila.append(contfilas)
+				palabra.append(contpalabra)
 				auxiliar_palabra=''
 				estado=0	
 			else:
 				estado=0
 				auxiliar_palabra = ''
+		if(caracter==" " ):
+			contpalabra=contpalabra+1
+		if(caracter=="\n"):
+			contfilas=contfilas+1
+			contpalabra=1
 	if(estado==3):
 		palabras_ere.append(auxiliar_palabra)
+		fila.append(contfilas)
+		palabra.append(contpalabra)
+
 	return palabras_ere
 
 def estadoCero(caracter):

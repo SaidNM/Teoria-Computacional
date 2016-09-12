@@ -31,7 +31,8 @@ def IniciarProtocolo():
 	
 	IniciarArchivoValidas()
 	encendido=True
-
+	if(encendido==True):
+		print("encendido")
 	while encendido:
 		IniciarArchivo()
 		print("---Iniciando Protocolo---")
@@ -71,6 +72,10 @@ def IniciarProtocolo():
 		archivo1.close
 		print("Validando estado(encendido/apagado)")
 		encendido=random.choice([True,False])
+		if(encendido==True):
+			print("encendido")
+		else:
+			print("Apagado")
 
 
 

@@ -46,7 +46,8 @@ elif(opcion==2):
 			print("No es una cadena con paridad")
 		
 		while True:
-			nC=funcionesPar.nueva_cadena()
+			print("1.-Nuevo conteo\n2.-salir ")
+			nC=funcionesPar.op_aleatorio()
 			if(nC==1):
 				break
 			elif(nC==2):
