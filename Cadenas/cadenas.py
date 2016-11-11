@@ -30,7 +30,7 @@ def iniciar_archivo ():
 		exit()
 def tamanio():
 	try:
-		tam = input("Introduce el tamaño de la cadena:")
+		tam = input("Introduce el tamanio de la cadena:")
 		tam = int(tam)
 		return tam
 	except:
@@ -49,12 +49,11 @@ def iniciar_programa(tamanio):
 	for indice in range (1,tamanio+1):
 		print ("Va en ",indice)
 		cad_aux = [0] * indice
-
 		while continuar:
 			archivo.write(", ")
 
 			for i in range(indice):
-				archivo.write(cadena[cad_aux[i]])
+				archivo.write(cadena[cad_aux[i]])	
 			cont = 0
 			while (cont < indice):
 				cad_aux[cont]=cad_aux[cont] + 1
@@ -66,6 +65,7 @@ def iniciar_programa(tamanio):
 			if (cont>=indice):
 				cad_aux=[]
 				break
+			
 	archivo.write(" }\n")
 	archivo.close() 
 

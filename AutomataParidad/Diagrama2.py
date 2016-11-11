@@ -2,7 +2,7 @@ from tkinter import *
 
 def mostarDiagrama():
 	ventana1 = Tk()
-	ventana1.geometry("600x600+400+50")  #geometry(widthxheight)
+	ventana1.geometry("600x600")  #geometry(widthxheight)
 	ventana1.title("Automata Paridad")
 	ventana1.resizable(width=False,height=False)
 	AreaDibujo1=Canvas(ventana1,width=595,height=595)
