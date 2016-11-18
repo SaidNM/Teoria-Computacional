@@ -4,6 +4,15 @@ def IniciarArchivo():
 	archivo=open("palindromo.txt","w")
 	archivo.close
 
+def Run(pal,longitud,par):
+	try:
+		archivo=open("palindromo.txt","a")
+	except:
+		exit()
+	exito=generar_palindromo1(archivo,pal,longitud,par)
+	archivo.close
+	return exito
+
 def opcion_fin(par):
 	if(par==True):
 		op=1
@@ -34,11 +43,8 @@ def regla5(pal):
 	pal="1"+pal+"1"
 	return pal
 
-def generar_palindromo1(pal,longitud,par):
-	try:
-		archivo=open("palindromo.txt","a")
-	except:
-		exit()
+def generar_palindromo1(archivo,pal,longitud,par):
+	
 	if(longitud>1):
 		
 		opcion=opcion_inicio()
@@ -61,9 +67,8 @@ def generar_palindromo1(pal,longitud,par):
 			pal=regla3(pal)
 			archivo.write("\n"+pal)
 	if (longitud==0):
-		archivo.close
 		return 1
 	longitud=longitud-1
-	pal=generar_palindromo1(pal,longitud,par)
+	pal=generar_palindromo1(archivo,pal,longitud,par)
 
 

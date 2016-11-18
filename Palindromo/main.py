@@ -21,7 +21,7 @@ while True:
 			g=palindromo.generar_palindromo1("S",(tamanio/2)+1,True)
 		else:
 			tamanio=int(tamanio/2)+1
-			g=palindromo.generar_palindromo1("S",tamanio,False)
+			g=palindromo.Run("S",tamanio,False)
 
 		while True:
 			try:
