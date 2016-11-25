@@ -13,47 +13,80 @@ def IniciarArchivo():
     archivo=open("Palabras.txt","w")
     archivo.close
 
-def Manual(estado,no_palabra,no_fila):
-    palabra_aux=''
-    palabra=input("Introduzca un pequeño texto: ")
-    for caracter in palabra:
-        caracter.lower()
-        if(caracter==' '):
-            no_palabra=no_palabra+1
-            if(estado==3 or estado==7):
-                print(palabra+' numero de palabra= '+str(no_palabra))
-                palabra_aux=''
-            else:
-                palabra_aux=''
-        if(caracter=='\n'):
-            no_fila=no_fila+1
-        palabra_aux=palabra_aux+caracter
-        estado=webay.automataWebay(caracter,estado)
-
-def main():
-    IniciarArchivo()
-    palabra_aux=''
-    estado=0
-    no_fila=0
-    no_palabra=0
-
+def AbrirArchivo():
     try:
         archivo=open("Palabras.txt","a")
     except:
-        print("Error al abrirel archivo")
+        print("\nError al abrir el archivo")
         exit()
+    return archivo
+def escribir(archivo,palabra_aux,no_palabra,no_fila):
+    archivo.write("Palabra: "+palabra_aux+" Numero de palabra: "+str(no_palabra)+" Numero de fila: "+str(no_fila))
+    archivo.write("\n")
 
+
+def Evaluar(texto):
+    archivo=AbrirArchivo()
+    palabra_aux=''
+    final=False
+    estado=0
+    no_palabra=1
+    no_fila=1
+
+    for caracter in texto:
+        caracter=caracter.lower()
+        estado=webay.automataWebay(caracter,estado)
+        if(estado==3 or estado==7):
+            final=True
+        if(caracter=='\n'):
+            if(final):
+                escribir(archivo,palabra_aux,no_palabra,no_fila)
+                palabra_aux=''
+                final=False
+            else:
+                palabra_aux=''
+            no_palabra=1
+            no_fila=no_fila+1
+            continue
+        if (caracter==' '):
+            if(final):
+                escribir(archivo,palabra_aux,no_palabra,no_fila)
+                final=False
+            else:
+                palabra_aux=''
+            no_palabra=no_palabra+1
+
+            continue
+        palabra_aux=palabra_aux+caracter
+    if(final):
+        no_palabra=no_palabra+1
+        escribir(archivo,palabra_aux,no_palabra,no_fila)
+
+    archivo.close
+
+def leer_Archivo():
+    try:
+        archivo=open("archivo.txt","r")
+        texto=str(archivo.read())
+    except:
+        print("\nError al abrir el archivo")
+        exit()
+    return texto
+
+def main():
+    IniciarArchivo()
     while True:
         eleccion=menu()
         if(eleccion==1):
-                Manual(estado,no_palabra,no_fila)
+            texto=input("Introduzca un pequeño texto: ")
+            Evaluar(texto)
         elif(eleccion==2):
-            pass
+            texto=leer_Archivo()
+            Evaluar(texto)
         elif(eleccion==3):
             pass
         elif(eleccion==4):
             exit()
         else:
             continue
-    archivo.close
 main()
