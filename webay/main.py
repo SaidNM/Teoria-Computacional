@@ -1,4 +1,5 @@
 import webay
+import diagrama
 
 def menu():
     try:
@@ -84,7 +85,7 @@ def main():
             texto=leer_Archivo()
             Evaluar(texto)
         elif(eleccion==3):
-            pass
+            diagrama.mostrarDiagrama()
         elif(eleccion==4):
             exit()
         else:
