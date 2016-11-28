@@ -70,9 +70,33 @@ def mostrarDiagrama():
 
 
     #creacion de circulos de indicacion
+    #inicio
+    AreaDibujo.create_oval(47,322,53,328,fill="black")
     #web
+    AreaDibujo.create_oval(52,296,58,302,fill="black")
+    AreaDibujo.create_oval(61,285,67,291,fill="black")
+    AreaDibujo.create_oval(76,278,82,284,fill="black")
+    AreaDibujo.create_oval(115,275,121,281,fill="black")
+
+    AreaDibujo.create_oval(198,209,204,215,fill="black")
+    AreaDibujo.create_oval(397,197,403,203,fill="black")
+    AreaDibujo.create_oval(587,197,593,203,fill="black")
+    AreaDibujo.create_oval(210,166,216,172,fill="black")
+
+    AreaDibujo.create_oval(293,177,299,183,fill="black")
+    AreaDibujo.create_oval(269,152,275,158,fill="black")
+    AreaDibujo.create_oval(647,397,653,403,fill="black")
+
+    AreaDibujo.create_oval(253,397,259,403,fill="black")
+    AreaDibujo.create_oval(268,403,274,409,fill="black")
     #ebay
 
+    #etiquetas
+    #inicio
+    inicio=Label(ventana,text="inicio",font="Verdana 6").place(x=20,y=305)
+    #estados
+    #web
+    #ebay
 
 
     ventana.mainloop()
