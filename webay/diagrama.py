@@ -35,11 +35,19 @@ def mostrarDiagrama():
 
     AreaDibujo.create_line(650,260,650,400)
     AreaDibujo.create_line(296,180,404,180)
+    AreaDibujo.create_line(407,230,253,402)
+    AreaDibujo.create_line(600,230,269,408)
     #ebay
     AreaDibujo.create_line(149,332,203,440)
     AreaDibujo.create_line(300,450,400,450)
     AreaDibujo.create_line(500,450,600,450)
     AreaDibujo.create_line(700,450,770,450)
+
+    AreaDibujo.create_line(250,400,250,250)
+    AreaDibujo.create_line(405,424,265,247)
+    AreaDibujo.create_line(298,430,403,430)
+    AreaDibujo.create_line(618,410,280,240)
+    AreaDibujo.create_line(787,405,294,225)
 
     #creacion de arcos de transicion
     #inicio
@@ -48,11 +56,17 @@ def mostrarDiagrama():
     AreaDibujo.create_arc(210,125,260,185,start=2,extent=210,style=ARC)
     AreaDibujo.create_arc(110,190,400,450,start=112,extent=50,style=ARC)
     AreaDibujo.create_arc(150,100,750,650,start=55,extent=72,style=ARC)
-
-
-
+    AreaDibujo.create_arc(20,55,720,395,start=26,extent=181,style=ARC)
+    AreaDibujo.create_arc(78,85,480,500,start=41,extent=137,style=ARC)
 
     #ebay
+    AreaDibujo.create_arc(110,190,400,460,start=200,extent=48,style=ARC)
+    AreaDibujo.create_arc(20,240,880,600,start=157,extent=173,style=ARC)
+    AreaDibujo.create_arc(200,385,890,550,start=45,extent=95,style=ARC)
+    AreaDibujo.create_arc(70,85,770,571,start=189,extent=128,style=ARC)
+    AreaDibujo.create_arc(90,85,560,520,start=199,extent=98,style=ARC)
+    AreaDibujo.create_arc(250,390,625,550,start=200,extent=146,style=ARC)
+    AreaDibujo.create_arc(208,442,285,530,start=172,extent=185,style=ARC)
 
 
     #creacion de circulos de indicacion
