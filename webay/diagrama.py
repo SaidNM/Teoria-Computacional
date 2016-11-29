@@ -90,6 +90,27 @@ def mostrarDiagrama():
     AreaDibujo.create_oval(253,397,259,403,fill="black")
     AreaDibujo.create_oval(268,403,274,409,fill="black")
     #ebay
+    AreaDibujo.create_oval(53,346,59,352,fill="black")
+    AreaDibujo.create_oval(72,365,78,371,fill="black")
+    AreaDibujo.create_oval(102,372,108,378,fill="black")
+    AreaDibujo.create_oval(117,368,123,374,fill="black")
+
+    AreaDibujo.create_oval(199,436,205,442,fill="black")
+    AreaDibujo.create_oval(206,476,212,482,fill="black")
+    AreaDibujo.create_oval(297,447,303,453,fill="black")
+
+    AreaDibujo.create_oval(259,495,265,501,fill="black")
+    AreaDibujo.create_oval(278,411,284,417,fill="black")
+    AreaDibujo.create_oval(247,247,253,253,fill="black")
+    AreaDibujo.create_oval(399,427,405,433,fill="black")
+
+    AreaDibujo.create_oval(263,245,269,251,fill="black")
+    AreaDibujo.create_oval(597,447,603,453,fill="black")
+
+    AreaDibujo.create_oval(276,238,282,244,fill="black")
+    AreaDibujo.create_oval(768,447,774,453,fill="black")
+
+    AreaDibujo.create_oval(292,223,298,229,fill="black")
 
     #etiquetas
     #inicio
