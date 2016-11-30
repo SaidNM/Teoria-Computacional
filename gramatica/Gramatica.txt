@@ -1,0 +1,10 @@
+B
+(RB			B->(RB
+()B			R-> )
+()(RB			B->(RB
+()()B			R-> )
+()()			B-> e 
+B
+(RB			B->(RB
+((RRB			R->(RR
+(()RB			R-> )
