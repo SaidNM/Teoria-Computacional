@@ -1,21 +1,22 @@
 
-package sources;
+package Stack;
 
 
 public class Nodo {
-    private int dato;
+    private String dato;
     private Nodo siguiente;
 
     public Nodo() {
-        this.dato=0;
-        this.siguiente=null;
+        this.dato="";
+        this.siguiente = null;
     }
 
-    public int getDato() {
+  
+    public String getDato() {
         return dato;
     }
 
-    public void setDato(int dato) {
+    public void setDato(String dato) {
         this.dato = dato;
     }
 

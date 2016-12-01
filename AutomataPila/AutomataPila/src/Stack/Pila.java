@@ -1,5 +1,5 @@
 
-package sources;
+package Stack;
 
 public class Pila {
     private Nodo tope;
@@ -8,7 +8,7 @@ public class Pila {
         this.tope = null;
     }
     
-public void push(int dato){
+public void push(String dato){
     Nodo nuevo = new Nodo();
     nuevo.setDato(dato);
     
@@ -19,12 +19,11 @@ public void push(int dato){
         nuevo.setSiguiente(tope);
         tope=nuevo;
     }
-    System.out.println(tope.getDato());
 }
-
-public int pop(){
+ 
+public String pop(){
     Nodo auxiliar;
-    int dato=0;
+    String dato="";
     if(!is_empty()){
         auxiliar=tope;
         tope=tope.getSiguiente();
@@ -35,9 +34,8 @@ public int pop(){
     else{
         System.out.println("Pila vacia");
     }
-    System.out.println(tope.getDato());
     return dato;
-}    
+}  
 
 public boolean is_empty(){
     if(tope==null){
