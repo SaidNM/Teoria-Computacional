@@ -1,0 +1,2 @@
+def maquinaTuring(cadena):
+    pass
