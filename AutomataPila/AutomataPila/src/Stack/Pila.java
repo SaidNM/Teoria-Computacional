@@ -31,9 +31,6 @@ public String pop(){
         auxiliar=null;
         
     }
-    else{
-        System.out.println("Pila vacia");
-    }
     return dato;
 }  
 

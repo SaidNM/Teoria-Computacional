@@ -1,4 +1,5 @@
 import random
+import MaquinaTuring
 
 def longitud():
   num=random.randint(1,1000)

@@ -1,2 +1,3 @@
-def maquinaTuring(cadena):
-    pass
+def maquinaTuring(cadena,estado):
+    cadena=list(cadena)
+    print(cadena)

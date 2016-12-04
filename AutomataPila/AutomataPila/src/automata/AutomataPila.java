@@ -11,35 +11,57 @@ import java.io.PrintWriter;
 
 public class AutomataPila {
     private Pila automata;
-    private char estado;
-    
+    private int tamanio;
     
     public AutomataPila() {
         automata=new Pila();
        
     }
     
-    public void evaluar(char caracter){
-        if(caracter=='0'){
-            estado='q';
-            automata.push("X");
-
-        }
-        else if(caracter=='1'){
-            if(automata.is_empty()){
-                System.out.println("Cadena no aceptada");
-                System.exit(0);
+    public String evaluar(char caracter,String estado){
+        //System.out.println(estado);
+        if(estado.equals("q0")){
+            if(caracter=='1'){
+                if(!automata.is_empty()){
+                    estado="q1";
+                    automata.pop();
+                    tamanio--;
+                }
+                else{
+                    return "";
+                }
+            }
+            else if(caracter=='0'){
+                estado="q0";
+                automata.push("X");
+                tamanio++;
             }
             else{
-                estado='p';
-                String dato=automata.pop();
+                return "";
             }
         }
-        else{
-            System.out.println("Cadena invalida");
-            System.exit(0);
+        else if(estado.equals("q1")){
+            if(!automata.is_empty()){
+                if(caracter=='1'){
+                    estado="q1";
+                    automata.pop();
+                    tamanio--;
+                }
+                else if(caracter=='0'){
+                    return "";
+                }
+                else{
+                    return "";
+                }
+            
+               }
+            else{
+                return "";
+            }
         }
-    }
+        return estado;
+        }
+   
     
     public boolean fin(){
         if(automata.is_empty()){
@@ -48,8 +70,15 @@ public class AutomataPila {
         else{
             return false;
         }
-    
     }
+    public void vaciarPila(){
+  
+        for(int i=0;i<tamanio;i++){
+            automata.pop();
+        }
+        
+        }
+    
     
    public void IniciarArchivo(String texto){
     File archivo;

@@ -6,19 +6,22 @@ def longitud():
 	return x
 
 palindromo.IniciarArchivo()
-
+def menu():
+	print("-----Menu-----")
+	print("1.-Modo Manual")
+	print("2.-Modo Automatico")
+	print("3.-Salir")
 
 while True:
-	try:
-		sel=input("\t\tMenu\n1.-Generar Palindromo\n2.-Salir\nElija una opcion: ")
-		sel=int(sel)
-	except:
-		exit()
-	if(sel==1):	
-		tamanio=longitud()
+	menu()
+	opcion=input("Seleccione una opcion: ")
+	if(opcion=="1"):
+		tamanio=input("Ingrese un tamanio de cadena: ")
 		print(tamanio)
+		tamanio=int(tamanio)
 		if(tamanio%2==0):
-			g=palindromo.generar_palindromo1("S",(tamanio/2)+1,True)
+			g=palindromo.Run("S",(tamanio/2)+1,True)
+	
 		else:
 			tamanio=int(tamanio/2)+1
 			g=palindromo.Run("S",tamanio,False)
@@ -36,14 +39,33 @@ while True:
 				exit()
 			else:
 				continue
+	elif(opcion=="2"):
+		tamanio=longitud()
+		print(tamanio)
+		if(tamanio%2==0):
+			g=palindromo.Run("S",(tamanio/2)+1,True)
+		else:
+			tamanio=int(tamanio/2)+1
+			g=palindromo.Run("S",tamanio,False)
 
-	if(sel==2):
+
+		while True:
+			seln=random.randint(1,2)
+			try:
+				print("Desea regresar al menu\n1.-Si\n2.-No\n- %s" %seln)
+				
+			except:
+				exit()
+
+			if(seln==1):
+				break
+			elif(seln==2):
+				exit()
+			else:
+				continue
+
+	elif(opcion=="3"):
 		exit()
-	
+
 	else:
-		continue
-
-
-
-
-
+		print("Seleccione una opcion correcta")
