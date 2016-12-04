@@ -12,10 +12,11 @@ import java.io.PrintWriter;
 public class AutomataPila {
     private Pila automata;
     private int tamanio;
+    private String cadena;
     
     public AutomataPila() {
         automata=new Pila();
-       
+       cadena="Z0";
     }
     
     public String evaluar(char caracter,String estado){
@@ -25,6 +26,7 @@ public class AutomataPila {
                 if(!automata.is_empty()){
                     estado="q1";
                     automata.pop();
+                    cadena=cadena.substring(1);
                     tamanio--;
                 }
                 else{
@@ -34,6 +36,8 @@ public class AutomataPila {
             else if(caracter=='0'){
                 estado="q0";
                 automata.push("X");
+                cadena="X"+cadena;
+                //System.out.println(automata.imprimirPila());
                 tamanio++;
             }
             else{
@@ -45,6 +49,7 @@ public class AutomataPila {
                 if(caracter=='1'){
                     estado="q1";
                     automata.pop();
+                    cadena=cadena.substring(1);
                     tamanio--;
                 }
                 else if(caracter=='0'){
@@ -81,23 +86,60 @@ public class AutomataPila {
     
     
    public void IniciarArchivo(String texto){
-    File archivo;
-    FileWriter escribirArchivo;
-   
-    try{
-        archivo=new File("Historia.txt");
-        escribirArchivo= new FileWriter(archivo);
-        BufferedWriter bw = new BufferedWriter(escribirArchivo);
-        PrintWriter salida = new PrintWriter(bw);
-        
-        salida.write(texto);
-        salida.close();
-        bw.close();
-        }
-    
-    catch(Exception e){
-        System.out.println("Error al abrir el archivo");
-    }
-   }
+    File f = new File ("archivo.txt");
 
+        if ( !( f.exists ( ) ) ){
+        try {
+            FileWriter w = new FileWriter ( f, true );
+            f.createNewFile ( );
+            w.write (texto);
+            } 
+        catch ( Exception e ) {
+        e.printStackTrace ( );
+        }
+        } 
+        else {
+        try{
+        FileWriter w = new FileWriter ( f, true );
+        w.write (texto);
+        w.close ( );
+        } 
+        
+        catch (Exception e ) {
+        e.printStackTrace ( );
+        }
 }
+   }
+   
+
+    public String getCadena() {
+        return cadena;
+    }
+
+    public void setCadena(String cadena) {
+        this.cadena = cadena;
+    }
+    
+    public int GenerarNumero(){
+        int numero;
+        numero=(int)(Math.random()*100)+1;
+        return numero;
+        }
+     public int Generarbit(){
+        int numero;
+        numero=(int)(Math.random()*2);
+        return numero;
+        }
+   
+     public String generarCadena(){
+     String cadena="";
+     int numero=GenerarNumero();
+         for (int i = 0; i < numero; i++) {
+             cadena=cadena+Generarbit();
+         }
+     
+     return cadena;
+     }
+}
+
+
