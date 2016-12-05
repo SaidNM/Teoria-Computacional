@@ -66,6 +66,7 @@ def main():
         elif(opcion=='2'):
             while True:
                 cadena=generar_cadena()
+                print(cadena)
                 estado=MaquinaTuring.maquinaTuring(cadena,archivo)
                 if(estado==4):
                     validas.write(cadena)

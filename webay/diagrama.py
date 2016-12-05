@@ -116,8 +116,50 @@ def mostrarDiagrama():
     #inicio
     inicio=Label(ventana,text="inicio",font="Verdana 6").place(x=20,y=305)
     #estados
+    q0=Label(ventana,text="q0",font="Verdana 10",background="sky blue").place(x=90,y=317)
+    q1=Label(ventana,text="q1",font="Verdana 10",background="sky blue").place(x=240,y=190)
+    q2=Label(ventana,text="q2",font="Verdana 10",background="sky blue").place(x=440,y=190)
+    q3=Label(ventana,text="q3",font="Verdana 10",background="sky blue").place(x=640,y=190)
+    q4=Label(ventana,text="q4",font="Verdana 10",background="sky blue").place(x=240,y=440)
+    q5=Label(ventana,text="q5",font="Verdana 10",background="sky blue").place(x=440,y=440)
+    q6=Label(ventana,text="q6",font="Verdana 10",background="sky blue").place(x=640,y=440)
+    q7=Label(ventana,text="q7",font="Verdana 10",background="sky blue").place(x=820,y=440)
     #web
+    w1=Label(ventana,text="w",font="Verdana 7").place(x=165,y=285)
+    w2=Label(ventana,text="no es w,e",font="Verdana 7").place(x=125,y=212)
+    w3=Label(ventana,text="e",font="Verdana 7").place(x=165,y=345)
+    w4=Label(ventana,text="w",font="Verdana 7").place(x=390,y=160)
+    w5=Label(ventana,text="e",font="Verdana 7").place(x=310,y=190)
+    w6=Label(ventana,text="w",font="Verdana 7").place(x=220,y=120)
+    w7=Label(ventana,text="w",font="Verdana 7").place(x=455,y=105)
+
+    w8=Label(ventana,text="b",font="Verdana 7").place(x=510,y=190)
+    w9=Label(ventana,text="no es w,e,a",font="Verdana 7").place(x=455,y=40)
+    w10=Label(ventana,text="no es w,e,b",font="Verdana 7").place(x=245,y=95)
+    w11=Label(ventana,text="e",font="Verdana 7").place(x=390,y=215)
+    w12=Label(ventana,text="e",font="Verdana 7").place(x=580,y=215)
+    w13=Label(ventana,text="a",font="Verdana 7").place(x=660,y=270)
     #ebay
+    e1=Label(ventana,text="no es w,e,b",font="Verdana 6").place(x=120,y=385)
+    e2=Label(ventana,text="e",font="Verdana 7").place(x=263,y=525)
+    e3=Label(ventana,text="b",font="Verdana 7").place(x=310,y=412)
+    e4=Label(ventana,text="e",font="Verdana 7").place(x=380,y=455)
+    e5=Label(ventana,text="a",font="Verdana 7").place(x=510,y=430)
+    e6=Label(ventana,text="y",font="Verdana 7").place(x=710,y=430)
+
+    e7=Label(ventana,text="e",font="Verdana 7").place(x=710,y=400)
+    e8=Label(ventana,text="e",font="Verdana 7").place(x=580,y=476)
+    e9=Label(ventana,text="w",font="Verdana 7").place(x=710,y=355)
+    e10=Label(ventana,text="w",font="Verdana 7").place(x=550,y=355)
+    e11=Label(ventana,text="w",font="Verdana 7").place(x=370,y=360)
+    e12=Label(ventana,text="w",font="Verdana 7").place(x=230,y=370)
+
+    e13=Label(ventana,text="no es w,e",font="Verdana 7").place(x=450,y=605)
+    e14=Label(ventana,text="no es w,e,a",font="Verdana 7").place(x=425,y=505)
+    e15=Label(ventana,text="no es e,y,w",font="Verdana 7").place(x=470,y=570)
+    e16=Label(ventana,text="no es w,e",font="Verdana 6").place(x=35,y=220)
+
+
 
 
     ventana.mainloop()
