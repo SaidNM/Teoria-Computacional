@@ -1,0 +1,225 @@
+0011
+|
+q0
+X011
+ |
+ q1
+X011
+  |
+  q1
+X0Y1
+ |
+ q2
+X0Y1
+|
+q2
+X0Y1
+ |
+ q0
+XXY1
+  |
+  q1
+XXY1
+   |
+   q1
+XXYY
+  |
+  q2
+XXYY
+ |
+ q2
+XXYY
+  |
+  q0
+XXYY
+   |
+   q3
+XXYY
+    |
+    q3
+XXYY
+    |
+    q4
+0101
+|
+q0
+X101
+ |
+ q1
+XY01
+|
+q2
+XY01
+ |
+ q0
+XY01
+  |
+  q3
+XY01
+  |
+  q-1
+0001
+|
+q0
+X001
+ |
+ q1
+X001
+  |
+  q1
+X001
+   |
+   q1
+X00Y
+  |
+  q2
+X00Y
+ |
+ q2
+X00Y
+|
+q2
+X00Y
+ |
+ q0
+XX0Y
+  |
+  q1
+XX0Y
+   |
+   q1
+XX0Y
+    |
+    q1
+asas
+|
+q0
+asas
+|
+q-1
+00001111
+|
+q0
+X0001111
+ |
+ q1
+X0001111
+  |
+  q1
+X0001111
+   |
+   q1
+X0001111
+    |
+    q1
+X000Y111
+   |
+   q2
+X000Y111
+  |
+  q2
+X000Y111
+ |
+ q2
+X000Y111
+|
+q2
+X000Y111
+ |
+ q0
+XX00Y111
+  |
+  q1
+XX00Y111
+   |
+   q1
+XX00Y111
+    |
+    q1
+XX00Y111
+     |
+     q1
+XX00YY11
+    |
+    q2
+XX00YY11
+   |
+   q2
+XX00YY11
+  |
+  q2
+XX00YY11
+ |
+ q2
+XX00YY11
+  |
+  q0
+XXX0YY11
+   |
+   q1
+XXX0YY11
+    |
+    q1
+XXX0YY11
+     |
+     q1
+XXX0YY11
+      |
+      q1
+XXX0YYY1
+     |
+     q2
+XXX0YYY1
+    |
+    q2
+XXX0YYY1
+   |
+   q2
+XXX0YYY1
+  |
+  q2
+XXX0YYY1
+   |
+   q0
+XXXXYYY1
+    |
+    q1
+XXXXYYY1
+     |
+     q1
+XXXXYYY1
+      |
+      q1
+XXXXYYY1
+       |
+       q1
+XXXXYYYY
+      |
+      q2
+XXXXYYYY
+     |
+     q2
+XXXXYYYY
+    |
+    q2
+XXXXYYYY
+   |
+   q2
+XXXXYYYY
+    |
+    q0
+XXXXYYYY
+     |
+     q3
+XXXXYYYY
+      |
+      q3
+XXXXYYYY
+       |
+       q3
+XXXXYYYY
+        |
+        q3
+XXXXYYYY
+        |
+        q4
